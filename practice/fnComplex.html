@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          .content{
+               width: 100px;
+               margin: 5px; padding: 3px;
+               border: 1px solid #ccc;
+          }
+          p{margin: 0;}
+     </style>
+</head>
+<body>
+     <h4>실행 결과</h4>
+     <div class="content">
+     <p id="demo1"></p>
+     <p id="demo2"></p>
+     </div>
+
+     <script>
+
+          let inpNum1 = Number(prompt("첫번째 숫자를 입력하세요"));
+          let inpNum2 = Number(prompt("두번째 숫자를 입력하세요"));
+
+          let inpNum3 = Number(prompt("또 다른 첫번째 숫자를 입력하세요"));
+          let inpNum4 = Number(prompt("또 다른 두번째 숫자를 입력하세요"));
+
+          function fnComplex(x,y){
+               if(x==y){
+                    return (x * y);
+               }else{
+                    return (x + y);
+               }
+     
+          }
+          num1=fnComplex(inpNum1,inpNum2);
+          num2=fnComplex(inpNum3,inpNum4);
+
+     document.getElementById("demo1").innerHTML = "num1 = " + num1;
+     document.getElementById("demo2").innerHTML = "num2 = " + num2;
+     </script>
+</body>
+</html>
