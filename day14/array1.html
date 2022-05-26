@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>배열의 생성과 사용</title>
+</head>
+<body>
+     <script>
+          //배열의 생성과 사용
+          //배열- 여러ㅐ로자료를 저자알 수 있는 메모리공간
+
+          let animal=[];  //비어있는 배열 설정
+
+          animal[0] = "dog";
+          animal[1] = "cat";
+          animal[2] = "cow";
+
+          //특정한 자료 출력
+          console.log(animal[0]);
+          console.log(animal[1]);
+
+          //자료 수정
+          animal[2] = "monkey";
+
+          //자료 삭제
+
+          delete animal[1];
+
+          //배열의 크기 또는 길이
+          console.log(animal.length + "개");
+
+          //전체 data 출력
+          for(let i = 0; i < animal.length; i++){
+               document.write(animal[i] + "<br>");
+          }
+     </script>
+</body>
+</html>

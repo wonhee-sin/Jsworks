@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>배경색 바꾸기</title>
+     <style>
+          .menu{
+               width: 450px;
+               margin: 0 auto;
+          }
+          .menu ul{padding: 0; 
+               text-align: center;
+          }
+          ul li{
+               width: 50px; 
+               display: inline-block;
+               list-style: none;
+               border: 1px solid black;
+               padding: 10px;
+          }
+          ul li a{
+               margin: 0 auto;
+               text-decoration: none;
+               color: black;
+          }
+          ul .green:hover{
+               background: forestgreen;
+          }
+          ul .green:hover a{
+               color: white;
+          }
+          ul .black:hover{
+               background: black;
+          }
+          ul .black:hover a{
+               color : white;
+          }
+          ul .pink:hover{
+               background: pink;
+          }
+          ul .pink:hover a{
+               color: white;
+          }
+          .box{
+               margin: auto;
+               border-radius: 10px;
+               width: 450px;
+               height: 300px;
+               border: 3px solid gold;
+          }
+     </style>
+</head>
+<body>
+     <div class="menu">
+          <ul>
+               <li class="green"><a href="#" onclick="changeBg('forestgreen')">Green</a></li>
+               <li class="black"><a href="#" onclick="changeBg('black')">Black</a></li>
+               <li class="pink"><a href="#" onclick="changeBg('pink')">Pink</a></li>
+          </ul>
+     </div>
+     <div class="box" id="rect"></div>
+
+     <script>
+          function changeBg(color){
+               let rect = document.getElementById("rect");
+               rect.style.backgroundColor = color;
+          }
+     </script>
+</body>
+</html>
