@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>배열 객체의 함수</title>
+     <script>
+          let number = [1, 2, 3];
+          number.push(4);
+/*
+          //인덱스로 출력
+          for(i=0;i<number.length;i++){
+               document.write(number[i] + " ");
+          }
+          document.write("<br>")
+*/
+          //for ~ in문으로 출력
+          //for(변수 이름 in 배열이름)
+          for(var item in number){
+               document.write(number[item] + " ");
+          }
+
+          document.write("<br>");
+          number.pop() // 4를 삭제
+
+          for(var item in number){
+               document.write(number[item] + " ");
+          }
+     </script>
+</head>
+<body>
+     
+</body>
+</html>

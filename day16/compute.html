@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>익명 함수</title>
+</head>
+<body>
+     <script>
+          //명시적 선언
+          function compute(){
+               let x = 10;
+               let y = 100;
+               let result = x / y ;
+               console.log(result);
+          }
+          //호출
+          compute();
+
+          //익명 함수 선언
+
+          let compute2 = function(){
+               let x = 10;
+               let y = 100;
+               let result = x / y ;
+               console.log(result);
+          }
+          //호출
+          compute2();
+
+          //1부터 10까지 출력하는 함수
+
+          let number = function(x){
+               for(i = 1; i <= x; i++){
+                    document.write(i + "<br>");
+               }
+          }
+          //매개변수로 입력하는 방법
+          number(20);
+     </script>
+</body>
+</html>
