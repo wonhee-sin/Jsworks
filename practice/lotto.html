@@ -10,16 +10,19 @@
      <h1>로또 추첨 번호</h1>
 
      <script>
-          let pic = [];
+          let pick = [];
 
           for(i=0;i<6;i++){
-               pic[i] = Math.floor(Math.random()*45) + 1;
+               pick[i] = Math.floor(Math.random()*45) + 1;
                for(j=0; j<i; j++){
-                    if(pic[j]==pic[i]){
-                         i--
+                    if(pick[j]==pick[i]){
+                         i--;
                     }
                }
-               document.write(pic[i] + " ");
+          }
+
+          for(i=0;i<6;i++){
+               document.write(pick[i] + " ");
           }
      </script>
 </body>
