@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>마우스로 선택한 사진 바꾸기</title>
+     <style>
+          #content{width: 600px; margin: 0 auto; text-align: center;}
+          .small{width: 100px; height: 100px;}
+          #smallPic{margin: 20px 5px;}
+          .small:hover{border: 5px solid yellowgreen;}
+     </style>
+</head>
+<body>
+     <section id="content">
+          <h1>커피의 세계</h1>
+          <div>
+          <img src="./img/coffee-gray.jpg" alt="커피잔" width="320" height="320" id="cup">
+          <div id="smallPic">
+          <img src="./img/coffee-gray.jpg" alt="커피잔" class="small">
+          <img src="./img/coffee-blue.jpg" alt="커피잔" class="small">
+          <img src="./img/coffee-pink.jpg" alt="커피잔" class="small">
+          </div>
+          </div>
+     </section>
+
+     <script src="./js/showBig.js"></script>
+</body>
+</html>
