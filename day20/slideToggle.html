@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>슬라이드 토글</title>
+     <script src="./js/jquery-3.6.0.js"></script>
+     <script>
+          $(document).ready(function(){
+               $(".up").click(function(){
+                    $("p").slideUp();
+                    $("p").slideDown();
+               })
+               $(".down").click(function down1(){
+                    $("p").slideDown();
+               })
+               $(".toggle").click(function(){
+                    $("p").slideToggle();
+               })
+          });
+     </script>
+</head>
+<body>
+     <p>운수 좋은 날</p>
+
+     <button class="up">Up</button>
+     <button class="down">Down</button>
+     <button class="toggle">UpDown</button>
+</body>
+</html>
