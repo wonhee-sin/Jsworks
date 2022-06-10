@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          *{margin: 10px;}
+          div{
+               width: 100px; height: 100px;
+               background-color: greenyellow;
+               margin-left: 25px;
+          }
+     </style>
+     <script src="./js/jquery-3.6.0.js"></script>
+     <script>
+          $(document).ready(function(){
+               $("#start").click(function(){
+                    $("div").animate({height : 300}, 2000);
+                    $("div").animate({width : 300}, 3000);
+               });
+
+               $("#stop").click(function(){
+                    $("div").stop();
+                    $("div").stop();
+               });
+          });
+     </script>
+</head>
+<body>
+     <p>
+          <button id="start">start</button>
+          <button id="stop">stop</button>
+     </p>
+     <div></div>
+</body>
+</html>

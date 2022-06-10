@@ -39,10 +39,16 @@
             opacity: 0.8;            
         }
     </style>    
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-3.6.0.js"></script>
     <script>
         $(document).ready(function() {
-          // 이부분에 코드를 작성합니다. 
+            $(".subject").mousemove(function(event) {
+                var x = event.pageX;
+                var y = event.pageY;
+                $(".tip").css({left: x +10 , top: y - 40}).addClass("on");
+            }).mouseleave(function() {
+                $(".tip").removeClass("on");
+            });
         });
     </script>
 </head>
