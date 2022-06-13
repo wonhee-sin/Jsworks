@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+          table{
+               width: 100%;
+               border-collapse: collapse;
+          }
+          th, td {
+               border: 1px solid #ccc;
+               padding: 10px;
+          }
+          caption{margin-bottom: 10px;}
+     </style>
+     <script src="./js/jquery-3.6.0.js"></script>
+     <script>
+          $.ajax({
+               type : "GET",
+               url : "score.json",
+               dataType : "json",
+               success: function(data){
+                    let elem = "";
+                    $.each(data, function(index, obj){
+                         elem += "<tr>";
+                         elem += "<th scope='row'>" + obj.name + "</th>";
+                         elem += "<td>" + obj.score1 + "</td>";
+                         elem += "<td>" + obj.score2 + "</td>";
+                         elem += "<td>" + obj.score3 + "</td>";
+                         elem += "</tr>";
+                    });                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                    $("table tbody").append(elem);
+               },
+               error: function(xhr) { //xmlhttprequest
+                    console.log(xhr.status + "/" + xhr.errorText);
+               }
+          });
+
+     </script>
+</head>
+<body>
+     <table>
+          <caption>학생별 시험 점수</caption>
+          <thead>
+               <tr>
+                    <th scope="col">이름</th>
+                    <th scope="col">html</th>
+                    <th scope="col">css</th>
+                    <th scope="col">Javascript</th>
+               </tr>
+          </thead>
+          <tbody></tbody>
+
+     </table>
+</body>
+</html>

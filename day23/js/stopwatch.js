@@ -16,7 +16,7 @@ function stopWatch(){
      $("#startbtn").click(function(){
 
           if(sw){
-               $(".fa").css("color","#f60");
+               $(".fa-solid").css("color","#f60");
                this.style.color = "#555";
                sw = false;
 
@@ -54,7 +54,7 @@ function stopWatch(){
 
      $("#pausebtn").click(function(){
           if(time != 0){
-               $(".fa").css("color","#f60")
+               $(".fa-solid").css("color","#f60")
                this.style.color = "#555";
                clearInterval(timer);
                sw = true;
@@ -63,7 +63,7 @@ function stopWatch(){
 
      $("#stopbtn").click(function(){
           if(time != 0){
-               $(".fa").css("color","#f60")
+               $(".fa-solid").css("color","#f60")
                this.style.color = "#555";
                clearInterval(timer);
                sw = true;
