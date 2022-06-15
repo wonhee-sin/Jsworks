@@ -1,83 +1,18 @@
-let enteredIndex = 0;
+let overedIndex = 0;
+let isOver1 = [false, false, false, false];
+let isOver2 = [false, false, false, false];
 
-function goHide(enteredIndex){
-	switch (enteredIndex) {
-		case 1:
-			$('.gnb_depth2_1').stop().fadeOut('fast');
-			break;
-		case 2:
-			$('.gnb_depth2_2').stop().fadeOut('fast');
-			break;
-		case 3:
-			$('.gnb_depth2_3').stop().fadeOut('fast');
-			break;
-		case 4:
-			$('.gnb_depth2_4').stop().fadeOut('fast');
-			break;
+
+
+function goHide(overedIndex) {
+	if (!isOver1[overedIndex] && !isOver2[overedIndex]) {
+		$('.gnb_depth2_'+(overedIndex+1)).stop().fadeOut('fast');
 	}
 }
 
-$(document).ready(function() {
-	//상단 메뉴 마우스오버, 
 
-	$('.openAll1').mouseover(function(){
-		if ( parseInt($('header').css('width')) > 800 )
-		$('.gnb_depth2_1').fadeIn('fast');
-	});	
-    $('.openAll1').focus(function(){
-		if ( parseInt($('header').css('width')) > 800 )
-		$('.gnb_depth2_1').fadeIn('fast');
-	});
-	$('.openAll1').mouseout(function(){
-		// setTimeout("goHide(1)",200);
-	});
-	$('.gnb_depth2_1 li:last-child a').blur(function(){
-		// setTimeout("goHide(1)",200);
-	});
-	$('.gnb_depth2_1').mouseover(function(){
-
-	});	
-	$('.gnb_depth2_1').focus(function(){
-
-	});	
-	$('.gnb_depth2_1').mouseout(function(){
-		setTimeout("goHide(1)",200);
-	});	
-	$('.gnb_depth2_1').blur(function(){
-		// setTimeout("goHide(1)",200);
-	});	
-
-	$('.openAll2').mouseover(function(){
-		if ( parseInt($('header').css('width')) > 800 )
-		$('.gnb_depth2_2').fadeIn('fast');
-	});	
-    $('.openAll2').focus(function(){
-		if ( parseInt($('header').css('width')) > 800 )
-		$('.gnb_depth2_2').fadeIn('fast');
-	});
-	$('.openAll2').mouseout(function(){
-		// setTimeout("goHide(2)",200);
-	});
-	$('.gnb_depth2_2 li:last-child a').blur(function(){
-		// setTimeout("goHide(2)",200);
-	});
-	$('.gnb_depth2_2').mouseover(function(){
-
-	});	
-	$('.gnb_depth2_2').focus(function(){
-
-	});	
-	$('.gnb_depth2_2').mouseout(function(){
-		setTimeout("goHide(2)",200);
-	});	
-	$('.gnb_depth2_2').blur(function(){
-		setTimeout("goHide(2)",200);
-	});	
-
-
-
-
-	//top을 클릭하면 header로 이동(라이브러리)
+$(document).ready( function() {
+	
 	$('a.s_point').smoothScroll();
 
 	// 스크롤하여 내려와야 top버튼이 보이도록 함.
@@ -88,6 +23,130 @@ $(document).ready(function() {
 	  else $('.to_top').removeClass('hide');
 	});
 
+	//gnb_depth2_1	
+	$('.openAll1').mouseover(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_1').fadeIn('fast');
+		isOver1[0] = true;
+	});	
+    $('.openAll1').focus(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_1').fadeIn('fast');
+		isOver1[0] = true;
+	});
+	$('.openAll1').mouseout(function(){
+		isOver1[0] = false;
+		setTimeout("goHide(0)",200);
+	});	
+	$('.gnb_depth2_1 li:last-child a').blur(function(){
+		isOver1[0] = false;
+		setTimeout("goHide(0)",200);
+	});	
+	$('.gnb_depth2_1').mouseover(function(){
+		isOver2[0] = true;			
+	});	
+	$('.gnb_depth2_1').focus(function(){
+		isOver2[0] = true;			
+	});	
+	$('.gnb_depth2_1').mouseout(function(){
+		isOver2[0] = false;
+		setTimeout("goHide(0)",200);
+	});	
+	$('.gnb_depth2_1').blur(function(){
+		isOver2[0] = false;
+		setTimeout("goHide(0)",200);
+	});	
+	//gnb_depth2_2	
+	$('.openAll2').mouseover(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_2').fadeIn('fast');
+		isOver1[1] = true;
+	});
+	$('.openAll2').focus(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_2').fadeIn('fast');
+		isOver1[1] = true;
+	});
+	$('.openAll2').mouseout(function(){
+		isOver1[1] = false;
+		setTimeout("goHide(1)",200);
+	});	
+	$('.gnb_depth2_2 li:last-child a').blur(function(){
+		isOver1[1] = false;
+		setTimeout("goHide(1)",200);
+	});	
+	$('.gnb_depth2_2').mouseover(function(){
+		isOver2[1] = true;			
+	});	
+	$('.gnb_depth2_2').focus(function(){
+		isOver2[1] = true;			
+	});	
+	$('.gnb_depth2_2').mouseout(function(){
+		isOver2[1] = false;
+		setTimeout("goHide(1)",200);
+	});	
+	$('.gnb_depth2_2').blur(function(){
+		isOver2[1] = false;
+		setTimeout("goHide(1)",200);
+	});	
+	//gnb_depth2_3	
+	$('.openAll3').mouseover(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_3').fadeIn('fast');
+		isOver1[2] = true;
+	});
+	$('.openAll3').focus(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_3').fadeIn('fast');
+		isOver1[2] = true;
+	});
+	$('.openAll3').mouseout(function(){
+		isOver1[2] = false;
+		setTimeout("goHide(2)",200);
+	});	
+	$('.gnb_depth2_3 li:last-child a').blur(function(){
+		isOver1[2] = false;
+		setTimeout("goHide(2)",200);
+	});	
+	$('.gnb_depth2_3').mouseover(function(){
+		isOver2[2] = true;			
+	});	
+	$('.gnb_depth2_3').focus(function(){
+		isOver2[2] = true;			
+	});	
+	$('.gnb_depth2_3').mouseout(function(){
+		isOver2[2] = false;
+		setTimeout("goHide(2)",200);
+	});	
+	$('.gnb_depth2_3').blur(function(){
+		isOver2[2] = false;
+		setTimeout("goHide(2)",200);
+	});	
+	//gnb_depth2_4	
+	$('.openAll4').mouseover(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_4').fadeIn('fast');
+		isOver1[3] = true;
+	});
+	$('.openAll4').focus(function(){
+		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_4').fadeIn('fast');
+		isOver1[3] = true;
+	});
+	$('.openAll4').mouseout(function(){
+		isOver1[3] = false;
+		setTimeout("goHide(3)",200);
+	});	
+	$('.gnb_depth2_4 li:last-child a').blur(function(){
+		isOver1[3] = false;
+		setTimeout("goHide(3)",200);
+	});	
+	$('.gnb_depth2_4').mouseover(function(){
+		isOver2[3] = true;			
+	});	
+	$('.gnb_depth2_4').focus(function(){
+		isOver2[3] = true;			
+	});	
+	$('.gnb_depth2_4').mouseout(function(){
+		isOver2[3] = false;
+		setTimeout("goHide(3)",200);
+	});	
+	$('.gnb_depth2_4').blur(function(){
+		isOver2[3] = false;
+		setTimeout("goHide(3)",200);
+	});	
     
 	//모바일 메뉴 띄움
 	$('.openMOgnb').click(function(){
