@@ -25,12 +25,14 @@ $(document).ready( function() {
 
 	//gnb_depth2_1	
 	$('.openAll1').mouseover(function(){
-		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_1').fadeIn('fast');
-		isOver1[0] = true;
+		if ( parseInt($('header').css('width')) > 800 )
+			$('.gnb_depth2_1').fadeIn('fast');
+			isOver1[0] = true;
 	});	
     $('.openAll1').focus(function(){
-		if ( parseInt($('header').css('width')) > 800 ) $('.gnb_depth2_1').fadeIn('fast');
-		isOver1[0] = true;
+		if ( parseInt($('header').css('width')) > 800 )
+			$('.gnb_depth2_1').fadeIn('fast');
+			isOver1[0] = true;
 	});
 	$('.openAll1').mouseout(function(){
 		isOver1[0] = false;
